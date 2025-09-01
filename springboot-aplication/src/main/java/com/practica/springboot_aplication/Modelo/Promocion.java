@@ -14,8 +14,8 @@ public class Promocion {
     @Column(name = "descripcion")
     private String descripcion;
 
-    @OneToMany(mappedBy = "Id_Promocion_Vigencia")
-    private List<Promocion_Vigencia> promociones;
+    @OneToMany(mappedBy = "promocion")
+    private List<PromocionVigencia> promociones;
 
 
 

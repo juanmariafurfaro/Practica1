@@ -12,7 +12,7 @@ public class Cliente {
     private Long idCliente;
 
     @ManyToOne
-    @JoinColumn(name = "Id_Usuario")
+    @JoinColumn(name = "id_usuario")
     private Usuario usuario;
 
     @Column(name = "nombre",nullable = false)

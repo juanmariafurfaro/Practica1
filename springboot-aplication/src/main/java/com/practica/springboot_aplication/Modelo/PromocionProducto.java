@@ -3,13 +3,13 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Promocion_Producto")
-public class Promocion_Producto {
+public class PromocionProducto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_Promocion_Producto")
     private Long idPromocionProducto;
 
-    @Column(name = "descuento")
+    @Column(name = "descuento", nullable = false)
     private Float descuento;
 
     @ManyToOne
@@ -18,6 +18,6 @@ public class Promocion_Producto {
 
     @ManyToOne
     @JoinColumn(name = "Id_Promocion_Vigencia")
-    private Promocion_Vigencia promociones;
+    private PromocionVigencia promociones;
 
 }

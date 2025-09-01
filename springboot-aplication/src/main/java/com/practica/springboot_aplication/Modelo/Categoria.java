@@ -1,4 +1,6 @@
 package com.practica.springboot_aplication.Modelo;
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -11,5 +13,9 @@ public class Categoria {
 
     @Column(name = "descripcion")
     private String descripcion;
+
+    
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
 
 }

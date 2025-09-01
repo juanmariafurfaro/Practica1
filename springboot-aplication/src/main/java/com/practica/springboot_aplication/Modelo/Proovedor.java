@@ -14,7 +14,7 @@ public class Proovedor {
     private String empresa;
 
     @Column(name = "contacto")
-    private Long contacto;
+    private String contacto;
 
     @Column(name = "direccion")
     private String direccion;

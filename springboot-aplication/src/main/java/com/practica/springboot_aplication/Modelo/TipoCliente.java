@@ -1,7 +1,8 @@
 package com.practica.springboot_aplication.Modelo;
 import jakarta.persistence.*;
-import java.util.List;
 
+@Entity
+@Table(name = "Tipo_Cliente")
 public class TipoCliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -10,8 +11,5 @@ public class TipoCliente {
 
     @Column(name = "descripcion",nullable = false)
     private String descripcion;
-
-    @OneToMany(mappedBy = "usuario")
-    private List<Cliente> clientes;
 
 }

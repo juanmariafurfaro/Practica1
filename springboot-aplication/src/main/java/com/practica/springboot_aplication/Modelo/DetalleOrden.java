@@ -1,6 +1,5 @@
 package com.practica.springboot_aplication.Modelo;
 import jakarta.persistence.*;
-import java.util.List;
 
 
 @Entity
@@ -12,14 +11,15 @@ public class DetalleOrden {
     private Long idDetalleOrden;
 
     @ManyToOne
-    @JoinColumn(name = "Id_Orden")
+    @JoinColumn(name = "id_orden")
     private Orden orden;
 
     @ManyToOne
-    @JoinColumn(name = "id_Producto")
+    @JoinColumn(name = "id_producto")
     private Producto producto;
 
-    @OneToMany(mappedBy = "Orden")
-    private List<Orden> ordenes;
+    @Column(name = "cantidad", nullable = false)
+    private Integer cantidad;
+
 
 }

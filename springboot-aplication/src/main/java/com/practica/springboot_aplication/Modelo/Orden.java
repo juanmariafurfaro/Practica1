@@ -10,7 +10,7 @@ public class Orden {
     private Long idOrden;
 
     @ManyToOne
-    @JoinColumn(name = "Id_Cliente")
+    @JoinColumn(name = "id_cliente")
     private Cliente cliente;
 
     @ManyToOne
