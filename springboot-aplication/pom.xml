@@ -18,7 +18,7 @@
   <description>Demo project for Spring Boot</description>
 
   <properties>
-    <java.version>21</java.version>
+      <java.version>17</java.version>
   </properties>
 
   <dependencies>
@@ -40,13 +40,14 @@
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 
-    <!-- DB en memoria para pruebas rápidas -->
+    <!-- DB en memoria para pruebas rápidas-->
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
       <scope>runtime</scope>
     </dependency>
 
+ 
     <!-- Devtools (opcional) -->
     <dependency>
       <groupId>org.springframework.boot</groupId>

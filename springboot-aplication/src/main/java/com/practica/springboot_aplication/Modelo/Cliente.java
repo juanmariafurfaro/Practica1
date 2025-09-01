@@ -25,8 +25,9 @@ public class Cliente {
     @JoinColumn(name = "id_tipo_cliente")
     private TipoCliente tipoCliente;
 
-    @OneToMany(mappedBy = "Cliente")
+    @OneToMany(mappedBy = "cliente")
     private List<Orden> ordenes;
+
     public Long getIdCliente() {
         return idCliente;
     }

@@ -16,7 +16,7 @@ public class Usuario {
     @Column(name = "Contrasenia",nullable = false)
     private String contrasenia;
 
-    @OneToMany(mappedBy = "Usuario")
+    @OneToMany(mappedBy = "usuario")
     private List<Cliente> clientes;
 
     public Long getIsUsuario() {

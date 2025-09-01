@@ -24,7 +24,7 @@ public class Empleado {
     @OneToMany(mappedBy = "jefe", fetch = FetchType.LAZY)
     private List<Empleado> subordinados = new ArrayList<>();
 
-    @OneToMany(mappedBy = "Empleado")
+    @OneToMany(mappedBy = "empleado")
     private List<Orden> ordenes;
 
     public Long getIdEmpleado() {
