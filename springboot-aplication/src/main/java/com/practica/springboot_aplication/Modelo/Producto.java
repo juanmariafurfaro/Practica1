@@ -24,6 +24,15 @@ public class Producto {
     @Column(name = "flg_discontinuo")
     private Boolean flag;
 
+    @ManyToOne
+    @JoinColumn(name = "id_categoria")
+    private Categoria categoria;
+
+    @ManyToOne
+    @JoinColumn(name = "id_proovedor")
+    private Proovedor proovedor;
+
+
     public Long getIdProducto() {
         return idProducto;
     }
@@ -88,13 +97,7 @@ public class Producto {
         this.proovedor = proovedor;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "id_categoria")
-    private Categoria categoria;
-
-    @ManyToOne
-    @JoinColumn(name = "id_proovedor")
-    private Proovedor proovedor;
-
+    public Producto() {    }
+    
 
 }

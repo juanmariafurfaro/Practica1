@@ -13,6 +13,12 @@ public class Usuario {
     @Column(name = "Username",nullable = false)
     private String usuario;
 
+    @Column(name = "Contrasenia",nullable = false)
+    private String contrasenia;
+
+    @OneToMany(mappedBy = "Usuario")
+    private List<Cliente> clientes;
+
     public Long getIsUsuario() {
         return isUsuario;
     }
@@ -45,10 +51,6 @@ public class Usuario {
         this.clientes = clientes;
     }
 
-    @Column(name = "Contrasenia",nullable = false)
-    private String contrasenia;
-
-    @OneToMany(mappedBy = "Usuario")
-    private List<Cliente> clientes;
+    public Usuario() {    } 
 
 }

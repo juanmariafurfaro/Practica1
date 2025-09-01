@@ -14,6 +14,13 @@ public class DetalleOrden {
     @JoinColumn(name = "id_orden")
     private Orden orden;
 
+    @ManyToOne
+    @JoinColumn(name = "id_producto")
+    private Producto producto;
+
+    @Column(name = "cantidad", nullable = false)
+    private Integer cantidad;
+
     public Long getIdDetalleOrden() {
         return idDetalleOrden;
     }
@@ -46,12 +53,7 @@ public class DetalleOrden {
         this.cantidad = cantidad;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "id_producto")
-    private Producto producto;
-
-    @Column(name = "cantidad", nullable = false)
-    private Integer cantidad;
+    public DetalleOrden() {}
 
 
 }

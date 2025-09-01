@@ -5,6 +5,22 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "Proovedor")
 public class Proovedor {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_proovedor")
+    private Long idProovedor;
+
+    @Column(name = "empresa")
+    private String empresa;
+
+    @Column(name = "contacto")
+    private String contacto;
+
+    @Column(name = "direccion")
+    private String direccion;
+    
+    
     public Long getIdProovedor() {
         return idProovedor;
     }
@@ -37,18 +53,6 @@ public class Proovedor {
         this.direccion = direccion;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_proovedor")
-    private Long idProovedor;
-
-    @Column(name = "empresa")
-    private String empresa;
-
-    @Column(name = "contacto")
-    private String contacto;
-
-    @Column(name = "direccion")
-    private String direccion;
+    public Proovedor() {    }
 
 }

@@ -14,6 +14,9 @@ public class Promocion {
     @Column(name = "descripcion")
     private String descripcion;
 
+    @OneToMany(mappedBy = "promocion")
+    private List<PromocionVigencia> promociones;
+
     public Long getIdPromocion() {
         return idPromocion;
     }
@@ -38,9 +41,8 @@ public class Promocion {
         this.promociones = promociones;
     }
 
-    @OneToMany(mappedBy = "promocion")
-    private List<PromocionVigencia> promociones;
-
+    public Promocion() {    }
+    
 
 
 }

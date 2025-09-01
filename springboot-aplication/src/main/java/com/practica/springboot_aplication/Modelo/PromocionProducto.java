@@ -16,6 +16,10 @@ public class PromocionProducto {
     @JoinColumn(name = "id_producto")
     private Producto producto;
 
+    @ManyToOne
+    @JoinColumn(name = "Id_Promocion_Vigencia")
+    private PromocionVigencia promociones;
+
     public Long getIdPromocionProducto() {
         return idPromocionProducto;
     }
@@ -48,8 +52,6 @@ public class PromocionProducto {
         this.promociones = promociones;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "Id_Promocion_Vigencia")
-    private PromocionVigencia promociones;
+    public PromocionProducto() {    }
 
 }

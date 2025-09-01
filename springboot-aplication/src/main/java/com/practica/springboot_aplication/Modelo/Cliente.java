@@ -10,7 +10,23 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id_Cliente")
     private Long idCliente;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_usuario")
+    private Usuario usuario;
 
+    @Column(name = "nombre",nullable = false)
+    private String nombre;
+
+    @Column(name = "direccion",nullable = false)
+    private String direccion;
+
+    @ManyToOne
+    @JoinColumn(name = "id_tipo_cliente")
+    private TipoCliente tipoCliente;
+
+    @OneToMany(mappedBy = "Cliente")
+    private List<Orden> ordenes;
     public Long getIdCliente() {
         return idCliente;
     }
@@ -59,21 +75,8 @@ public class Cliente {
         this.ordenes = ordenes;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
+    public Cliente(){}
 
-    @Column(name = "nombre",nullable = false)
-    private String nombre;
-
-    @Column(name = "direccion",nullable = false)
-    private String direccion;
-
-    @ManyToOne
-    @JoinColumn(name = "id_tipo_cliente")
-    private TipoCliente tipoCliente;
-
-    @OneToMany(mappedBy = "Cliente")
-    private List<Orden> ordenes;
+    
 
 }

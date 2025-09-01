@@ -13,6 +13,16 @@ public class Orden {
     @JoinColumn(name = "id_cliente")
     private Cliente cliente;
 
+    @ManyToOne
+    @JoinColumn(name = "id_empleado")
+    private Empleado empleado;
+
+    @Column(name = "fecha_generada")
+    private LocalDate fechaGenerada;
+
+    @Column(name = "fecha_entregada")
+    private LocalDate fechaEntregada;
+
     public Long getIdOrden() {
         return idOrden;
     }
@@ -53,15 +63,6 @@ public class Orden {
         this.fechaEntregada = fechaEntregada;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "id_empleado")
-    private Empleado empleado;
-
-    @Column(name = "fecha_generada")
-    private LocalDate fechaGenerada;
-
-    @Column(name = "fecha_entregada")
-    private LocalDate fechaEntregada;
-
+    public Orden() {    }
 
 }

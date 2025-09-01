@@ -13,6 +13,10 @@ public class ProovedorCategoria {
     @JoinColumn(name = "id_categoria")
     private Categoria categoria;
 
+    @ManyToOne
+    @JoinColumn(name = "id_proovedor")
+    private Proovedor proovedor;
+
     public Long getIdProovedorCategoria() {
         return idProovedorCategoria;
     }
@@ -37,9 +41,7 @@ public class ProovedorCategoria {
         this.proovedor = proovedor;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "id_proovedor")
-    private Proovedor proovedor;
 
+    public ProovedorCategoria() {    }
 
 }

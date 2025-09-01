@@ -14,6 +14,13 @@ public class PromocionVigencia {
     @Column(name = "fecha_inicio")
     private LocalDate fechaInicio;
 
+    @Column(name = "fecha_fin")
+    private LocalDate fechaFin;
+
+    @ManyToOne
+    @JoinColumn(name = "id_Promocion")
+    private Promocion promocion;
+
     public Long getIdPromocionVigencia() {
         return idPromocionVigencia;
     }
@@ -46,12 +53,7 @@ public class PromocionVigencia {
         this.promocion = promocion;
     }
 
-    @Column(name = "fecha_fin")
-    private LocalDate fechaFin;
 
-    @ManyToOne
-    @JoinColumn(name = "id_Promocion")
-    private Promocion promocion;
-
+    public PromocionVigencia() {    }
 
 }

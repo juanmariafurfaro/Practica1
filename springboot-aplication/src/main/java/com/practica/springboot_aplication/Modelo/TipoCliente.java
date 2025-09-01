@@ -28,4 +28,6 @@ public class TipoCliente {
         this.descripcion = descripcion;
     }
 
+    public TipoCliente() {    }
+
 }

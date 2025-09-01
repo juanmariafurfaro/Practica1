@@ -14,7 +14,9 @@ public class Categoria {
     @Column(name = "descripcion")
     private String descripcion;
 
-    
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
+
     public Long getIdCategoria() {
         return idCategoria;
     }
@@ -40,12 +42,14 @@ public class Categoria {
     }
 
 
+ 
+
+
     public void setProductos(List<Producto> productos) {
         this.productos = productos;
     }
 
 
-    @OneToMany(mappedBy = "categoria")
-    private List<Producto> productos;
-
+    
+   public Categoria() {    }
 }
