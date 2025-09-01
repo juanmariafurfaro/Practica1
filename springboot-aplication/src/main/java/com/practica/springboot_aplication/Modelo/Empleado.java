@@ -12,6 +12,46 @@ public class Empleado {
     @Column(name = "id_empleado")
     private Long idEmpleado;
 
+    public Long getIdEmpleado() {
+        return idEmpleado;
+    }
+
+    public void setIdEmpleado(Long idEmpleado) {
+        this.idEmpleado = idEmpleado;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Empleado getJefe() {
+        return jefe;
+    }
+
+    public void setJefe(Empleado jefe) {
+        this.jefe = jefe;
+    }
+
+    public List<Empleado> getSubordinados() {
+        return subordinados;
+    }
+
+    public void setSubordinados(List<Empleado> subordinados) {
+        this.subordinados = subordinados;
+    }
+
+    public List<Orden> getOrdenes() {
+        return ordenes;
+    }
+
+    public void setOrdenes(List<Orden> ordenes) {
+        this.ordenes = ordenes;
+    }
+
     @Column(name = "nombre", nullable = false, length = 100)
     private String nombre;
 

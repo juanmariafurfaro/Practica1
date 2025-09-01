@@ -12,4 +12,20 @@ public class TipoCliente {
     @Column(name = "descripcion",nullable = false)
     private String descripcion;
 
+    public Long getIdTipoCliente() {
+        return idTipoCliente;
+    }
+
+    public void setIdTipoCliente(Long idTipoCliente) {
+        this.idTipoCliente = idTipoCliente;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
 }

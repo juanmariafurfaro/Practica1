@@ -16,6 +16,38 @@ public class PromocionProducto {
     @JoinColumn(name = "id_producto")
     private Producto producto;
 
+    public Long getIdPromocionProducto() {
+        return idPromocionProducto;
+    }
+
+    public void setIdPromocionProducto(Long idPromocionProducto) {
+        this.idPromocionProducto = idPromocionProducto;
+    }
+
+    public Float getDescuento() {
+        return descuento;
+    }
+
+    public void setDescuento(Float descuento) {
+        this.descuento = descuento;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+
+    public PromocionVigencia getPromociones() {
+        return promociones;
+    }
+
+    public void setPromociones(PromocionVigencia promociones) {
+        this.promociones = promociones;
+    }
+
     @ManyToOne
     @JoinColumn(name = "Id_Promocion_Vigencia")
     private PromocionVigencia promociones;

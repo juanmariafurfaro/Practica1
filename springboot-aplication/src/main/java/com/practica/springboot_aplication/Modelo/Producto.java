@@ -24,6 +24,70 @@ public class Producto {
     @Column(name = "flg_discontinuo")
     private Boolean flag;
 
+    public Long getIdProducto() {
+        return idProducto;
+    }
+
+    public void setIdProducto(Long idProducto) {
+        this.idProducto = idProducto;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Float getPrecioUnitario() {
+        return precioUnitario;
+    }
+
+    public void setPrecioUnitario(Float precioUnitario) {
+        this.precioUnitario = precioUnitario;
+    }
+
+    public Integer getUnidadesStock() {
+        return unidadesStock;
+    }
+
+    public void setUnidadesStock(Integer unidadesStock) {
+        this.unidadesStock = unidadesStock;
+    }
+
+    public Integer getUnidadesReposicion() {
+        return unidadesReposicion;
+    }
+
+    public void setUnidadesReposicion(Integer unidadesReposicion) {
+        this.unidadesReposicion = unidadesReposicion;
+    }
+
+    public Boolean getFlag() {
+        return flag;
+    }
+
+    public void setFlag(Boolean flag) {
+        this.flag = flag;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public Proovedor getProovedor() {
+        return proovedor;
+    }
+
+    public void setProovedor(Proovedor proovedor) {
+        this.proovedor = proovedor;
+    }
+
     @ManyToOne
     @JoinColumn(name = "id_categoria")
     private Categoria categoria;

@@ -13,6 +13,38 @@ public class Usuario {
     @Column(name = "Username",nullable = false)
     private String usuario;
 
+    public Long getIsUsuario() {
+        return isUsuario;
+    }
+
+    public void setIsUsuario(Long isUsuario) {
+        this.isUsuario = isUsuario;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getContrasenia() {
+        return contrasenia;
+    }
+
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
+    }
+
+    public List<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(List<Cliente> clientes) {
+        this.clientes = clientes;
+    }
+
     @Column(name = "Contrasenia",nullable = false)
     private String contrasenia;
 

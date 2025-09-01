@@ -14,6 +14,38 @@ public class DetalleOrden {
     @JoinColumn(name = "id_orden")
     private Orden orden;
 
+    public Long getIdDetalleOrden() {
+        return idDetalleOrden;
+    }
+
+    public void setIdDetalleOrden(Long idDetalleOrden) {
+        this.idDetalleOrden = idDetalleOrden;
+    }
+
+    public Orden getOrden() {
+        return orden;
+    }
+
+    public void setOrden(Orden orden) {
+        this.orden = orden;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+
+    public Integer getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
+    }
+
     @ManyToOne
     @JoinColumn(name = "id_producto")
     private Producto producto;
